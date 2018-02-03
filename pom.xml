@@ -11,7 +11,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <main.class><!--main class fully qualified--></main.class>
+        <main.class>Program</main.class>
     </properties>
 
     <dependencies>
