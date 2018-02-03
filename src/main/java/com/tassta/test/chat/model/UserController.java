@@ -39,7 +39,9 @@ public class UserController {
         currentUser = null;
     }
 
-    public String createMessage(String text) {
+    public String createMessage(String text) throws UserNotConfirmException {
+        if (currentUser == null)
+            throw new UserNotConfirmException("Enter name");
         if (messageHistory == null)
             messageHistory = new MessageHistoryImpl();
         StringBuilder sb = new StringBuilder();
@@ -56,7 +58,7 @@ public class UserController {
         if (message.getReceiver() != null) {
             sb.append(" ->").append(message.getReceiver().getName());
         }
-        sb.append(" :").append(message.getText());
+        sb.append(": ").append(message.getText());
         return String.valueOf(sb);
     }
 }

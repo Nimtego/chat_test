@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.96" prefHeight="284.0" prefWidth="669.0" style="-fx-background-color: #bedfe4;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tassta.test.chat.view.MainWindowController">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.96" prefHeight="284.0" prefWidth="777.0" style="-fx-background-color: #bedfe4;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tassta.test.chat.view.MainWindowController">
     <children>
         <AnchorPane fx:id="leftBar" prefHeight="284.0" prefWidth="255.0" style="-fx-background-color: #3D4956;">
             <children>
@@ -23,19 +23,22 @@
                         <Font size="26.0" />
                     </font>
                 </Label>
-                <Button fx:id="exitButton" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#action" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #77b6bf;" text="Х" />
-            <Label fx:id="currentName" layoutX="96.0" layoutY="91.0" text="Name" textFill="#bc3a3a" />
+                <Button fx:id="exitButton" layoutX="11.0" layoutY="245.0" mnemonicParsing="false" onAction="#action" prefHeight="2.0" prefWidth="50.0" style="-fx-background-color: #77b6bf;" text="Exit" />
+            <Label fx:id="currentName" layoutX="85.0" layoutY="80.0" prefHeight="35.0" prefWidth="156.0" text="Name" textFill="#b1c9c6">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
             <Button fx:id="reloginButton" layoutX="95.0" layoutY="125.0" mnemonicParsing="false" onAction="#action" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #77b6bf;" text="Re-login" />
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="rightBarSheetAmount" layoutX="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="412.0" style="-fx-background-color: #3D5956;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+        <AnchorPane fx:id="rightBarSheetAmount" layoutX="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="520.0" style="-fx-background-color: #3D5956;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
             <children>
                 <Label fx:id="chatLabel" layoutX="14.0" layoutY="19.0" text="Chat" textFill="#77b6bf" />
                 <Label fx:id="messageLabel" layoutX="14.0" layoutY="161.0" prefHeight="29.0" prefWidth="50.0" text="Message" textAlignment="JUSTIFY" textFill="#77b6bf" wrapText="true" />
-            <TextArea fx:id="chatTextArea" layoutX="81.0" layoutY="19.0" prefHeight="132.0" prefWidth="307.0" style="-fx-background-color: #3D5956; -fx-border-color: #bedfe4; -fx-border-radius: 3;" />
-            <TextArea fx:id="messageTextArea" layoutX="81.0" layoutY="161.0" prefHeight="55.0" prefWidth="307.0" style="-fx-background-color: #3D5956; -fx-background-color: #bedfe4; -fx-border-radius: 3;" />
-            <Button id="confirmButton" fx:id="sendButton" layoutX="318.0" layoutY="228.0" mnemonicParsing="false" onAction="#action" onMouseExited="#mouseReMoved" onMouseMoved="#mouseMoved" prefHeight="17.0" prefWidth="67.0" style="-fx-background-color: #3999a8;" text="Send" />
-            <Button id="confirmButton" fx:id="clearButton" layoutX="235.0" layoutY="228.0" mnemonicParsing="false" onAction="#action" onMouseExited="#mouseReMoved" onMouseMoved="#mouseMoved" prefHeight="17.0" prefWidth="67.0" style="-fx-background-color: #3999a8;" text="Clear" />
+            <TextArea fx:id="chatTextArea" layoutX="81.0" layoutY="19.0" prefHeight="132.0" prefWidth="420.0" style="-fx-background-color: #3D5956; -fx-border-color: #bedfe4; -fx-border-radius: 3;" />
+            <TextArea fx:id="messageTextArea" layoutX="81.0" layoutY="161.0" prefHeight="55.0" prefWidth="420.0" style="-fx-background-color: #3D5956; -fx-background-color: #bedfe4; -fx-border-radius: 3;" />
+            <Button id="confirmButton" fx:id="sendButton" layoutX="434.0" layoutY="228.0" mnemonicParsing="false" onAction="#action" onMouseExited="#mouseReMoved" onMouseMoved="#mouseMoved" prefHeight="17.0" prefWidth="67.0" style="-fx-background-color: #3999a8;" text="Send" />
+            <Button id="confirmButton" fx:id="clearButton" layoutX="351.0" layoutY="228.0" mnemonicParsing="false" onAction="#action" onMouseExited="#mouseReMoved" onMouseMoved="#mouseMoved" prefHeight="17.0" prefWidth="67.0" style="-fx-background-color: #3999a8;" text="Clear" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="emptyRightPanel" layoutX="257.0" prefHeight="400.0" prefWidth="535.0" style="-fx-background-color: #3D5956;" visible="false" />

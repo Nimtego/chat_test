@@ -1,6 +1,7 @@
 package com.tassta.test.chat.view;
 
 import com.tassta.test.chat.model.UserController;
+import com.tassta.test.chat.model.UserNotConfirmException;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
@@ -72,7 +73,11 @@ public class MainWindowController {
 
         }
         if (sendButton.isArmed()) {
-            updateChat(userController.createMessage(messageTextArea.getText()));
+            try {
+                updateChat(userController.createMessage(messageTextArea.getText()));
+            } catch (UserNotConfirmException e) {
+                alert(e.getMessage());
+            }
         }
         if (clearButton.isArmed())
             messageTextArea.clear();
@@ -85,10 +90,8 @@ public class MainWindowController {
         }
     }
     private void updateChat(final String message) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(chatTextArea.getText()).append("\n").append(message);
-        chatTextArea.clear();
-        chatTextArea.setText(String.valueOf(sb));
+        chatTextArea.appendText("\n" +message);
+        messageTextArea.clear();
     }
 
     private void alert(String message) {

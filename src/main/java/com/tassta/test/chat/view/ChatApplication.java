@@ -32,7 +32,6 @@ public class ChatApplication extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.initStyle(StageStyle.TRANSPARENT);
         initRootLayout();
-        //    showPersonOverview();
     }
 
 
@@ -48,25 +47,11 @@ public class ChatApplication extends Application {
             scene.setFill(TRANSPARENT);
 
             primaryStage.setScene(scene);
-            /*primaryStage.getScene().getStylesheets().add("DarkTheme.css");*/
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public void showPersonOverview() {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(ChatApplication.class.getResource("/chat.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
     private void movementWindowWithoutFrame(Scene scene) {
         scene.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -84,21 +69,9 @@ public class ChatApplication extends Application {
         });
     }
 
-
     public Stage getPrimaryStage() {
         return primaryStage;
     }
 
-    public void setPrimaryStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-    }
-
-    public AnchorPane getAnchorPane() {
-        return anchorPane;
-    }
-
-    public void setAnchorPane(AnchorPane anchorPane) {
-        this.anchorPane = anchorPane;
-    }
 
 }
