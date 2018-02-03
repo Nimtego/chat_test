@@ -2,7 +2,7 @@ package com.tassta.test.chat.noimpl;
 
 import com.tassta.test.chat.model.Message;
 import com.tassta.test.chat.model.User;
-import com.tassta.test.chat.UserStateChangeHandler;
+import com.tassta.test.chat.model.UserStateChangeHandler;
 
 import java.util.function.Consumer;
 

@@ -1,4 +1,4 @@
-package com.tassta.test.chat;
+package com.tassta.test.chat.model;
 
 import com.tassta.test.chat.model.User;
 

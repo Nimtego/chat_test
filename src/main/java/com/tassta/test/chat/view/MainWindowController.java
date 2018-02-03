@@ -72,12 +72,7 @@ public class MainWindowController {
 
         }
         if (sendButton.isArmed()) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(currentName.getText())
-                    .append(": ")
-                    .append(messageTextArea.getText());
-            messageTextArea.clear();
-            updateChat(String.valueOf(sb));
+            updateChat(userController.createMessage(messageTextArea.getText()));
         }
         if (clearButton.isArmed())
             messageTextArea.clear();

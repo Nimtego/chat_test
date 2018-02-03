@@ -2,16 +2,12 @@ package com.tassta.test.chat.model;
 
 import javafx.scene.image.Image;
 
-/**
- * Date: 31.08.2017.
- * Time: 22:41.
- *
- * @author Pavel Gavrilov.
- */
+
 public class UserImpl implements User {
     private String name;
     private int id;
     private Image iconImage;
+    private boolean isOnline = false;
 
     public UserImpl() {
     }

@@ -1,6 +1,5 @@
-package com.tassta.test.chat;
+package com.tassta.test.chat.model;
 
-import com.tassta.test.chat.model.Message;
 import javafx.collections.ObservableList;
 
 /**
@@ -9,4 +8,6 @@ import javafx.collections.ObservableList;
 public interface MessageHistory
 {
     ObservableList<Message> getMessageList();
+
+    void setMessage(Message message);
 }

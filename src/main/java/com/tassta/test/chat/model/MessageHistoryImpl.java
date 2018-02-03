@@ -1,6 +1,6 @@
-package com.tassta.test.chat;
+package com.tassta.test.chat.model;
 
-import com.tassta.test.chat.model.Message;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
@@ -8,8 +8,17 @@ import javafx.collections.ObservableList;
  */
 public class MessageHistoryImpl implements MessageHistory{
     private ObservableList<Message> listOfMessage;
+
+    public MessageHistoryImpl() {
+        listOfMessage = FXCollections.observableArrayList();
+    }
     @Override
     public ObservableList<Message> getMessageList() {
         return listOfMessage;
+    }
+
+    @Override
+    public void setMessage(Message message) {
+        listOfMessage.add(message);
     }
 }
